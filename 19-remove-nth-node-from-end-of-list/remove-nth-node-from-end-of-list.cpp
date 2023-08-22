@@ -48,7 +48,7 @@ public:
             dummy= dummy-> next ; 
         }
 
-        if (dummy-> next!= nullptr && dummy->next->next !=nullptr)
+        if (dummy->next->next !=nullptr)
         dummy-> next = dummy-> next-> next ; 
         else
         dummy->next = nullptr ; 
