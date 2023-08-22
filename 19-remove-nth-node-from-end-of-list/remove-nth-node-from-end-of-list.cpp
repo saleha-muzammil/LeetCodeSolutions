@@ -41,23 +41,19 @@ public:
             return head  ;
         }
 
-        ListNode* current2= new ListNode() ; 
-        current2-> next = head ; 
+        dummy-> next = head ; 
 
-
-        for (int i=0 ; i<n && current2-> next !=nullptr; i++)
+        for (int i=0 ; i<n && dummy-> next !=nullptr; i++)
         {
-            current2= current2-> next ; 
+            dummy= dummy-> next ; 
         }
 
-        ListNode* node = current2 ; 
-
-        if (current2-> next!= nullptr && current2->next->next !=nullptr)
-        current2 -> next = current2-> next-> next ; 
+        if (dummy-> next!= nullptr && dummy->next->next !=nullptr)
+        dummy-> next = dummy-> next-> next ; 
         else
-        current2->next = nullptr ; 
+        dummy->next = nullptr ; 
 
-       // delete node ;
+        //delete dummy  ;
 
         return head ;
 
