@@ -24,21 +24,26 @@ public:
             size++ ; 
         }
 
+        n= size -n ; 
+        ListNode* dummy = new ListNode() ;
+
+        if (n==0)
+        {
+
+            if (size==0)
+            head= nullptr ; 
+            else 
+            {   
+            dummy = head ;     
+            head= head-> next ; 
+            delete dummy ;
+            }
+            return head  ;
+        }
+
         ListNode* current2= new ListNode() ; 
         current2-> next = head ; 
-        n= size -n ; 
 
-        if (n==0 && size ==1 )
-        {
-            head= nullptr ; 
-            return head  ;
-        }
-
-        else if (n==0)
-        {
-            head= head-> next ; 
-            return head  ;
-        }
 
         for (int i=0 ; i<n && current2-> next !=nullptr; i++)
         {
