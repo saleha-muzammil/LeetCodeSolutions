@@ -48,12 +48,15 @@ public:
             dummy= dummy-> next ; 
         }
 
+        current= nullptr  ; 
+        current= dummy-> next ;
+
         if (dummy->next->next !=nullptr)
         dummy-> next = dummy-> next-> next ; 
         else
         dummy->next = nullptr ; 
 
-        //delete dummy  ;
+        delete current  ;
 
         return head ;
 
