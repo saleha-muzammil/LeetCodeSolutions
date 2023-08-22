@@ -34,9 +34,9 @@ public:
             head= nullptr ; 
             else 
             {   
-            dummy = head ;     
+          //  dummy = head ;     
             head= head-> next ; 
-            delete dummy ;
+          //  delete dummy ;
             }
             return head  ;
         }
