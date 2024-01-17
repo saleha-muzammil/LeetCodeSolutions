@@ -95,7 +95,6 @@ TreeNode* findMinNode(TreeNode* node) {
         recoveringTree(node); 
         }
  
-    /* false if the min of the right is <= than us */
     if (node->right != NULL
         && minNode->val <= node->val)
         {
@@ -116,9 +115,10 @@ TreeNode* findMinNode(TreeNode* node) {
 
     return -1;
 }
-    void recoverTree(TreeNode* root) {
-
-        cout << recoveringTree(root) ; 
+    void recoverTree(TreeNode* root) 
+    {
+        
+        recoveringTree(root) ; 
 
     }
 
