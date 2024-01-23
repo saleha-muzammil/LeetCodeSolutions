@@ -44,6 +44,12 @@ public:
         node->left = constructMaximumBinaryTree(left) ; 
         node-> right = constructMaximumBinaryTree(right); 
 
+        for (int i=0 ;i < left.size(); i++)
+        left.pop_back(); 
+
+        for (int i=0 ;i < right.size(); i++)
+        right.pop_back() ;
+
         return node; 
     }
 };
